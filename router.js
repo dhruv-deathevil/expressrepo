@@ -7,7 +7,7 @@ const dictController= require("./controller/dict")
 //get request
 router.get("/",dictController.getHome)
 router.get("/test",dictController.getTest)
-//router.get("/",(req,res)=>{})
+router.get("/add",dictController.getAddWord)
 
 //post request
 router.post("/add",dictController.postWord)

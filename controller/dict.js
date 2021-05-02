@@ -11,16 +11,23 @@ const getHome = (req,res)=>{
 
 const getTest = (req,res)=>{
     res.send("This is test")
+    
 
+}
+const getAddWord = (req,res)=>{
+    res.render("addword")
 }
 
 const postWord = (req,res)=>{
-    di.SetWord("apple","fruit")
-res.send("This is post word")
+    
+    di.SetWord(req.body.NewWord,req.body.Meaning)
+// res.send("This is post word")
+res.redirect("/")
 }
 
 module.exports = {
     getHome,
     getTest,
-    postWord
+    postWord,
+    getAddWord
 }
